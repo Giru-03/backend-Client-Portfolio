@@ -2,12 +2,12 @@
     "version": 1,
     "builds":[
         {
-            "src": "portfolio/wsgi.py",
+            "src": "portfolio/portfolio/wsgi.py",
             "use": "@vercel/python",
             "config": {"maxLambdaSize": "15mb", "runtime":"python3.g"}
         },
         {
-            "src": "build_files.sh",
+            "src": "portfolio/build_files.sh",
             "use": "@vercel/static-build",
             "config": {
                 "distDir":"staticfiles_build"
@@ -21,7 +21,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "portfolio/wsgi.py"
+            "dest": "portfolio/portfolio/wsgi.py"
         }
     ]
 }
