@@ -1,1 +1,1 @@
-web: gunicorn reportersprj.wsgi --log-file -
+web: gunicorn porfolio/portfolio.wsgi --log-file -
